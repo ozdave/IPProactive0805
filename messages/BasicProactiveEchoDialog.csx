@@ -47,7 +47,7 @@ public class BasicProactiveEchoDialog : IDialog<object>
             // write the queue Message to the queue
             await AddMessageToQueueAsync(JsonConvert.SerializeObject(queueMessage));
 
-            await context.PostAsync($"{this.count++}: You said {queueMessage.Text}. Message added to the queue.");
+            await context.PostAsync($"{this.count++}: You said {queueMessage.Text}. Message added to the queue VSMod.");
             context.Wait(MessageReceivedAsync);
         }
     }
